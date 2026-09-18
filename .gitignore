@@ -1,0 +1,41 @@
+# Bytecode e caches do Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Ambientes virtuais
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Ferramentas, editores e sistema operacional
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Arquivos temporários, logs e cobertura
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+.coverage
+htmlcov/
+
+# Artefatos de empacotamento
+build/
+dist/
+*.egg-info/
+
+# Variáveis de ambiente e segredos locais
+.env
+.env.*
+!.env.example
