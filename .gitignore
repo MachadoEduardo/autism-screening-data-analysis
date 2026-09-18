@@ -39,3 +39,9 @@ dist/
 .env
 .env.*
 !.env.example
+
+# Dados locais
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep

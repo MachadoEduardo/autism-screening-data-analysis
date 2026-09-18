@@ -12,7 +12,7 @@ O dataset está disponível no Kaggle:
 
 - [Autism Screening for Toddlers](https://www.kaggle.com/datasets/fabdelja/autism-screening-for-toddlers/data)
 
-O arquivo original deverá ser baixado manualmente e armazenado em `data/raw/`. Antes de publicar os dados no GitHub, devem ser consultados os termos e a licença apresentados na página do dataset.
+O notebook baixa o arquivo público automaticamente quando ele ainda não está disponível em `data/raw/`. Os dados locais não são versionados pelo Git. Antes de publicá-los por outro meio, devem ser consultados os termos e a licença apresentados na página do dataset.
 
 ## Estrutura do projeto
 
