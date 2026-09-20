@@ -20,7 +20,7 @@ O notebook baixa o arquivo público automaticamente quando ele ainda não está 
 .
 ├── data/
 │   ├── raw/                 # Dados originais (baixados pelo notebook)
-│   └── processed/           # Dados limpos salvos pelo notebook
+│   └── processed/           # Dados limpos e prontos para ML
 ├── notebooks/
 │   └── 01_exploratory_data_analysis.ipynb
 ├── src/                     # Funções auxiliares futuras
@@ -37,9 +37,11 @@ O notebook `01_exploratory_data_analysis.ipynb` já cobre:
 
 - carregamento automático do dataset (quando ainda não estiver em `data/raw/`);
 - inspeção da estrutura e verificação de valores ausentes;
-- limpeza (nomes de colunas, categorias e duplicatas), ajuste de tipos e salvamento em `data/processed/`;
+- limpeza (nomes de colunas, categorias e duplicatas), ajuste de tipos e salvamento em `data/processed/toddler_autism_clean.csv`;
 - **estatística descritiva** de `Age_Mons` e `Qchat-10-Score`, além de contagens de `Class/ASD Traits`, `Sex`, `Jaundice` e `Family_mem_with_ASD`;
-- **identificação de possíveis outliers** com boxplot e regra do IQR em `Age_Mons` e `Qchat-10-Score`.
+- **identificação de possíveis outliers** com boxplot e regra do IQR em `Age_Mons` e `Qchat-10-Score`;
+- **visualizações e relações entre variáveis**;
+- **preparação para Machine Learning** (encoding, `train_test_split` estratificado) e exportação de `ml_features.csv`, `ml_train.csv` e `ml_test.csv` em `data/processed/` — sem treinar modelo.
 
 ## Como preparar o ambiente
 
@@ -69,6 +71,4 @@ Em seguida, abra o notebook `notebooks/01_exploratory_data_analysis.ipynb`.
 
 ## Próximas etapas
 
-- aprofundar visualizações e relações entre variáveis;
-- gerar e salvar gráficos em `reports/figures/` quando fizer sentido;
-- avaliar futuramente um modelo simples de classificação, sem finalidade diagnóstica.
+- treinar e avaliar um modelo simples de classificação a partir de `ml_train.csv` / `ml_test.csv`, sem finalidade diagnóstica.
