@@ -19,8 +19,8 @@ O notebook baixa o arquivo público automaticamente quando ele ainda não está 
 ```text
 .
 ├── data/
-│   ├── raw/                 # Dados originais, sem alterações
-│   └── processed/           # Dados tratados futuramente
+│   ├── raw/                 # Dados originais (baixados pelo notebook)
+│   └── processed/           # Dados limpos salvos pelo notebook
 ├── notebooks/
 │   └── 01_exploratory_data_analysis.ipynb
 ├── src/                     # Funções auxiliares futuras
@@ -33,7 +33,13 @@ O notebook baixa o arquivo público automaticamente quando ele ainda não está 
 
 ## Etapa atual
 
-Neste momento, o repositório contém apenas a estrutura inicial do projeto. A análise exploratória e qualquer possível etapa de Machine Learning serão desenvolvidas posteriormente.
+O notebook `01_exploratory_data_analysis.ipynb` já cobre:
+
+- carregamento automático do dataset (quando ainda não estiver em `data/raw/`);
+- inspeção da estrutura e verificação de valores ausentes;
+- limpeza (nomes de colunas, categorias e duplicatas), ajuste de tipos e salvamento em `data/processed/`;
+- **estatística descritiva** de `Age_Mons` e `Qchat-10-Score`, além de contagens de `Class/ASD Traits`, `Sex`, `Jaundice` e `Family_mem_with_ASD`;
+- **identificação de possíveis outliers** com boxplot e regra do IQR em `Age_Mons` e `Qchat-10-Score`.
 
 ## Como preparar o ambiente
 
@@ -63,8 +69,6 @@ Em seguida, abra o notebook `notebooks/01_exploratory_data_analysis.ipynb`.
 
 ## Próximas etapas
 
-- adicionar o dataset original em `data/raw/`;
-- documentar e realizar a análise exploratória;
-- tratar os dados e, se necessário, salvar uma versão em `data/processed/`;
-- gerar e salvar visualizações em `reports/figures/`;
+- aprofundar visualizações e relações entre variáveis;
+- gerar e salvar gráficos em `reports/figures/` quando fizer sentido;
 - avaliar futuramente um modelo simples de classificação, sem finalidade diagnóstica.
